@@ -54,7 +54,9 @@ ROOT_URLCONF = 'DjangoReact.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'DjangoReact','templates'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +120,7 @@ USE_TZ = True
 # static
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    
+    os.path.join(BASE_DIR, 'DjangoReact','static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

@@ -120,7 +120,7 @@ USE_TZ = True
 # static
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'DjangoReact','static'),
+    os.path.join(BASE_DIR, 'DjangoReact', 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

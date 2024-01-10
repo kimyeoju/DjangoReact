@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # Third Apps
     'debug_toolbar',
     # Loclas Apps
+    'accounts',
 ]
 
 MIDDLEWARE = [

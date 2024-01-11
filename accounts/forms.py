@@ -14,3 +14,12 @@ class SignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
         fields = ['username', 'email', 'first_name', 'last_name']
+        
+    def clean_mail(self):
+        email = self.cleaned_data.get('email')
+        if email:
+            qs = User.objects.filter(email=email)
+            if qs.exists():
+                raise forms.ValidationError("이미 등록된 이메일 주소입니다.")
+        return email
+            

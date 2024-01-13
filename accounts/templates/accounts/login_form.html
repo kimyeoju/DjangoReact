@@ -1,0 +1,12 @@
+{% extends "accounts/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <!-- submit_label 상단 templates _form.html 설정 -->
+            {% include "_form.html" with submit_label="로그인" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

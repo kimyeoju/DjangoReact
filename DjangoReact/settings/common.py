@@ -149,18 +149,12 @@ INTERNAL_IPS = ['127.0.0.1']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Send Grid
-SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
-EMAIL_HOST = 'smtp.naver.com'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.naver.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.naver.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'd_d0031@naver.com'
+EMAIL_HOST_PASSWORD = 'dutnsdl^^2418'
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False

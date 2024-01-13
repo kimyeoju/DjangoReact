@@ -1,9 +1,11 @@
 {% load bootstrap4 %}
 
 <div class="card">
+    {% if form_title %}
     <div class="card-header">
-        Featured
+        {{ form_title }}
     </div>
+    {% endif %}
     <div class="card-body">
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}

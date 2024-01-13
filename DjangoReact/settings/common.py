@@ -32,6 +32,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+ADMINS = [
+    ('Yeoju Kim', 'd_d0031@naver.com'),
+]
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -158,3 +163,5 @@ EMAIL_HOST_USER = 'd_d0031@naver.com'
 EMAIL_HOST_PASSWORD = 'dutnsdl^^2418'
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
+
+WELCOME_EMAIL_SENDER = "d_d0031@naver.com"

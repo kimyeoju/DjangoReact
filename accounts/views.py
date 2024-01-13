@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth import login as auth_login
 from django.contrib.auth.views import LoginView, logout_then_login
 from django.shortcuts import redirect, render
 from .forms import SignupForm
@@ -17,6 +18,8 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             signed_user = form.save()
+            # 회원가입 하자마자 로그인(auth_login 활용)
+            auth_login(request, signed_user)
             messages.success(request, "회원가입 환영합니다.")
             signed_user.send_welcome_email() # FIXME: Celery로 처리하는 것을 추천
             # '/' -> url pattern name을 적어도됨

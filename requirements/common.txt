@@ -1,5 +1,4 @@
 django~=4.2.7
-
 django-bootstrap4
 pillow
 django-pydenticon
